@@ -20,10 +20,17 @@ function RunMotor (index: number, pwm: number, dir: number) {
 }
 function RunTestPWM_MicrobitShield () {
     Run2MotorDC(0, 1023, 0, 1023)
+    basic.showIcon(IconNames.Heart)
+    Run2MotorDC(0, 500, 0, 500)
+    basic.showIcon(IconNames.SmallHeart)
     Run2MotorDC(0, 0, 0, 0)
+    basic.showIcon(IconNames.Diamond)
     Run2MotorDC(1, 1023, 1, 1023)
+    basic.showIcon(IconNames.Target)
     Run2MotorDC(1, 512, 1, 512)
+    basic.showIcon(IconNames.SmallDiamond)
     Run2MotorDC(0, 0, 0, 0)
+    basic.showIcon(IconNames.Happy)
 }
 input.onButtonPressed(Button.A, function () {
     pins.analogWritePin(AnalogPin.P13, 1023)
